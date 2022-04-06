@@ -33,6 +33,7 @@ const Country = () => {
             <div style={{ border: '2px solid red', width: '50% ', margin: 'auto',padding:"50px" }}>
                 <h3>Capital : {country.capital}</h3>
                 <h3>Population : {country.population}</h3>
+                <h3>latIng : {country.latlng}</h3>
                 <p>  <img className='img-fluid' src={country?.flags?.png} alt="" /></p>
                
 

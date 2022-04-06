@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Weather = () => {
   const [cityWeather,setCityWeather] = useState({});
 
+  let navigate = useNavigate();
   let {city} = useParams();
   
 
@@ -27,6 +28,8 @@ const Weather = () => {
                 <h2>Wind Speed : {cityWeather?.current?.wind_speed}</h2>
                 <h2>Precip : {cityWeather?.current?.precip}</h2>
             </div>
+
+            <button onClick={()=>{navigate('/')}} className='btn btn-primary mt-5'>Back to home</button>
         </div>
     );
 };
